@@ -20,13 +20,17 @@ import org.springframework.data.convert.Jsr310Converters;
 import com.daviof.minhasfinancas.model.enums.StatusLancamento;
 import com.daviof.minhasfinancas.model.enums.TipoLancamento;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table (name = "lancamento", schema = "financas")
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Lancamento {
 	
 	@Id
@@ -50,7 +54,7 @@ public class Lancamento {
 	@Column (name = "valor")
 	private BigDecimal valor;
 	
-	@Column (name = "data_cadatro")
+	@Column (name = "data_cadastro")
 //	@Convert(converter = Jsr310Converters.DateToLocalDateConverter.class)
 	private LocalDate dataCadatro;
 	

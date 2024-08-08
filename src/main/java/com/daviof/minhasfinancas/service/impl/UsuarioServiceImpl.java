@@ -2,8 +2,6 @@ package com.daviof.minhasfinancas.service.impl;
 
 import java.util.Optional;
 
-import javax.transaction.Transactional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -57,6 +55,11 @@ public class UsuarioServiceImpl implements UsuarioService {
 		}
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public Optional<Usuario> obterPorId(Long id) {
+		return repository.findById(id);
 	}
 
 }
